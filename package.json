@@ -1,0 +1,13 @@
+{
+  "name": "desktop",
+  "version": "1.0.0",
+  "main": "main.js",
+  "author": "gm0l74",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^3.0.12",
+    "electron-root-path": "^1.0.9",
+    "is-online": "^8.1.0",
+    "js-yaml": "^3.12.2"
+  }
+}

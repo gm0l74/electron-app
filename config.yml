@@ -1,0 +1,19 @@
+app:
+  name: 'XXXXXX'
+  url: 'http://localhost:8000/'
+  icon: 'XXXXXX'
+company:
+  name: 'XXXXXX'
+  license: 'XXXXXX'
+  website: 'https://www.google.com'
+op:
+  devmode_enable: true
+  offline_warning: true
+window:
+  frame: false
+  width: 1095
+  height: 700
+  minWidth: 720
+  minHeight: 500
+  hasShadow: true
+  resizable: true

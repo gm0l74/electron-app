@@ -1,0 +1,315 @@
+/*--------------------------------
+* Electron Desktop App
+* File : win.css
+*
+* @ author              gmoita
+* @ version             1.0
+*
+*	@ start date					21 03 2019
+*	@ last update					21 03 2019
+*
+* Description
+* Reset each tag default styles
+* Configure the elements of the window
+* structure (including titlebar)
+*--------------------------------*/
+
+/* Style reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Fonts */
+@font-face {
+	font-family: "Montserrat";
+	src: url(../assets/fonts/Montserrat/Montserrat-SemiBold.ttf);
+}
+
+/* Window structure styling */
+html, body {
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+/* Titlebar */
+#window-titlebar {
+	-webkit-app-region: no-drag;
+	-webkit-user-select: none;
+	user-select: none;
+	height: 30px;
+	padding: none;
+	margin: 0px;
+	background-color: #fcfcfc;
+}
+
+#window-titlebar-title {
+	-webkit-app-region: drag;
+	position: fixed;
+	width: calc(100% - 80px);
+	height: 24px;
+	font-family: Montserrat;
+	padding-left: 5px;
+	padding-top: 0.5px;
+	font-size: 11pt;
+}
+
+.windows #window-titlebar-title {
+	margin-top: 8px;
+	margin-left: 8px;
+}
+
+.mac #window-titlebar-title {
+	margin-top: 9px;
+	margin-left: 100px;
+}
+
+.linux #window-titlebar-title {
+	margin-top: 9px;
+	margin-left: 8px;
+}
+
+/* Titlebar buttons */
+#window-titlebar-btns {
+	-webkit-app-region: no-drag;
+	position: fixed;
+}
+
+.windows #window-titlebar-btns {
+	top: 0px;
+	right: 0px;
+}
+
+.linux #window-titlebar-btns {
+	top: 1.5px;
+	right: 0px;
+}
+
+.mac #window-titlebar-btns {
+	top: 1.5px;
+	left: 15px;
+	font-size: 15px;
+}
+
+/* Minimize button */
+#window-min-btn {
+	display: inline-block;
+	text-align: center;
+}
+
+.windows #window-min-btn {
+	line-height:30px;
+	margin: 0;
+	top: 0;
+	height: 30px;
+	width: 35px;
+	font-size: 11.5pt;
+	text-decoration: none;
+	color: #dbd9d9;
+}
+
+.mac #window-min-btn {
+	float: right;
+	margin-top: 3px;
+	margin-right: 7px;
+	vertical-align: center;
+  height: 22px;
+  width: 22px;
+	box-shadow: 0 0 1px 0.7px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+	background:#5AC05A;
+}
+
+.linux #window-min-btn {
+	float: left;
+	margin-top: 3px;
+	margin-right: 7px;
+	vertical-align: center;
+  height: 22px;
+  width: 22px;
+  background-color: rgba(255, 255, 255, 0.1);
+	box-shadow: 0 0 1px 0.7px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+	text-decoration: none;
+	color: #4c4c4c;
+	line-height: 23px;
+}
+
+.windows #window-min-btn:hover {
+	background-color: #2d2f33;
+	color: #fff;
+}
+
+.mac #window-min-btn:hover {
+	background-color: #59d159;
+}
+
+.linux #window-min-btn:hover {
+	background-color: #4c4c4c;
+	color: #fff;
+}
+
+/* Maximize button */
+#window-max-btn {
+	display: inline-block;
+	text-align: center;
+}
+
+.windows #window-max-btn {
+	line-height: 30px;
+	margin: 0;
+	top: 0;
+	height: 30px;
+	width: 35px;
+	font-size: 11.5pt;
+	text-decoration: none;
+	color: #dbd9d9;
+}
+
+.mac #window-max-btn {
+	margin-top: 3px;
+	margin-right: 7px;
+	vertical-align: center;
+  height: 22px;
+  width: 22px;
+	box-shadow: 0 0 1px 0.7px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+	background: #FDD800;
+}
+
+.linux #window-max-btn {
+	float: left;
+	margin-top: 3px;
+	margin-right: 7px;
+	vertical-align: center;
+	height: 22px;
+  width: 22px;
+	background-color: rgba(255, 255, 255, 0.1);
+	box-shadow: 0 0 1px 0.7px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+	text-decoration: none;
+	color: #4c4c4c;
+	font-size: 12px;
+	line-height: 22px;
+}
+
+.windows #window-max-btn:hover {
+	background-color: #2d2f33;
+	color: #fff;
+}
+
+.mac #window-max-btn:hover {
+	background-color: #fde700;
+}
+
+.linux #window-max-btn:hover {
+	background-color: #4c4c4c;
+	color: #fff;
+}
+
+/* Exit button */
+#window-close-btn {
+	display: inline-block;
+	text-align: center;
+}
+
+.windows #window-close-btn {
+	line-height:30px;
+	margin: 0;
+	top: 0;
+	height: 30px;
+	width: 50px;
+	font-size: 11.5pt;
+	text-decoration: none;
+	color: #dbd9d9;
+}
+
+.mac #window-close-btn {
+	float: left;
+	margin-top: 3px;
+	margin-right: 7px;
+	vertical-align: center;
+  height: 22px;
+  width: 22px;
+	box-shadow: 0 0 1px 0.7px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+	background: #ED594A;
+}
+
+.linux #window-close-btn {
+	float: left;
+	margin-top: 3px;
+	margin-right: 7px;
+	vertical-align: center;
+	height: 22px;
+  width: 22px;
+	background-color: rgba(255, 255, 255, 0.1);
+	box-shadow: 0 0 1px 0.7px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+	text-decoration: none;
+	color: #4c4c4c;
+	line-height: 23px;
+}
+
+.windows #window-close-btn:hover {
+	background-color: rgba(240, 71, 71, 1);
+	color: #fff;
+}
+
+.mac #window-close-btn:hover {
+	background-color: #f94836;
+}
+
+.linux #window-close-btn:hover {
+	background-color: #4c4c4c;
+	color: #fff;
+}
+
+/* Root element (contains everything but the titlebar) */
+#window-root {
+	overflow: hidden;
+  width: 100%;
+  height: calc(100% - 30px);
+	background-color: #fcfcfc;
+}
